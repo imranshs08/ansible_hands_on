@@ -1,0 +1,12 @@
+---
+- name: copy module demo
+  hosts: all
+  become: false
+  tasks:
+    - name: copy re[prt.txt
+      ansible.builtin.copy:
+        src: report.txt
+        dest: /home/vboxuser/report.txt
+        owner: vboxuser
+        mode: '0640'
+

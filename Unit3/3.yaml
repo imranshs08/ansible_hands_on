@@ -1,0 +1,12 @@
+---
+- name: fecth module demo
+  hosts: all
+  become: true
+  vars:
+    log_file: "/var/log/alternatives.log"
+    dump_dir: "/tmp/logs"  
+  tasks:
+    - name: fetch logs
+      ansible.builtin.fetch:
+        src: "{{ log_file }}"
+        dest:  "{{ dump_dir }}"
