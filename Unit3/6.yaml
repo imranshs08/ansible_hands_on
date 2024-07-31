@@ -1,0 +1,10 @@
+---
+- name: rolling update demo
+  hosts: centos
+  become: true
+  tasks:
+    - name: ensure pkg updated
+      yum:
+        name: nginx
+        state: latest
+        update_cache: true
