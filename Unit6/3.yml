@@ -1,0 +1,8 @@
+# Debug Module
+---
+- name: "Debug Module Demo - Default "
+  hosts: all
+  tasks:
+    - name: "Default Debug Message"
+      ansible.builtin.debug:
+        verbosity: 2

@@ -1,0 +1,11 @@
+# Debug Module
+---
+- name: "Debug Module Demo - Varaible"
+  hosts: all
+  vars:
+    fruit: "Apple"
+  tasks:
+    - name: "Debug Message"
+      ansible.builtin.debug:
+        msg: "Our fruit is {{ fruit }}"
+        verbosity: 2

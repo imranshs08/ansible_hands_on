@@ -1,0 +1,11 @@
+# Debug Module
+---
+- name: "Debug Module Demo - Varaible w/o JinJa2 "
+  hosts: all
+  vars:
+    fruit: "Apple"
+  tasks:
+    - name: "Debug Message"
+      ansible.builtin.debug:
+        var: fruit
+        verbosity: 2
